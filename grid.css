@@ -1,0 +1,132 @@
+:root {
+--cyan: hsla(179, 62%, 43%);
+--bright-yellow: hsl(71, 73%, 54%);
+--light-gray: hsl(204, 8%, 76%);
+--grayish-blue: hsl(218, 22%,67%);
+--white: #ffffff;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-size: 16px;
+    background-color: hsl(204, 43%, 93%);
+    min-height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding:1.5rem;
+    
+}
+.card-cont{
+   max-width:640px;
+   width: 100%;
+   background-color: var(--white);
+   border-radius:8px;
+   overflow:hidden;
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+   display:grid;
+   grid-template-columns:1fr;
+}
+section{
+    padding:1.8rem;
+
+}
+.card-head h1{
+    color:var(--cyan);
+    font-size: 1.4rem;
+    margin-bottom: 1.3rem;
+
+}
+
+.card-head h2{
+    color: var(--bright-yellow);
+    font-size: 1rem;
+    margin-bottom:0.8rem;
+
+}
+.card-head p{
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+    line-height:1.6;
+}
+
+.card-price{
+    background-color:var(--cyan);
+    color:var(--white);
+}
+
+.card-price h2,.card-features h2{
+    font-size:1.1rem;
+    margin-bottom:1.2rem;
+}
+
+.price-cont{
+    display:flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom:0.5rem;
+}
+.price{
+    font-size:2rem;
+    font-weight:700
+
+}
+
+.period{
+     color: rgba(255, 255, 255, 0.7);
+     font-size: 0.95rem;
+
+}
+.card-price p{
+    font-size:0.95rem;
+    margin-bottom:1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+.btn-signup{
+    width: 100%;
+    border:none;
+    padding:0.9rem;
+    border-radius:5px;
+    background-color:var(--bright-yellow);
+    color:var(--white);
+    font-weight:700;
+    font-size:1rem;
+    cursor:pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition:opacity 0.3s ease-in-out;
+
+}
+.btn-signup:hover{
+    opacity:0.8;
+}
+.card-features{
+    background-color: hsl(179, 62%, 43%, 0.85);
+    color:var(--white);
+
+}
+.card-features ul{
+ list-style:none;
+}
+.card-features li{
+    margin-bottom:0.5rem;
+    font-size: 0.85rem;
+    color: rgba(236, 243, 243, 0.897);
+}
+
+@media (min-width:600px){
+    .card-cont{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+.card-head{
+grid-column: 1 / -1;
+padding: 2.5rem;
+}
+
+.card-price,.card-features{
+    padding:2.5rem;
+}}
